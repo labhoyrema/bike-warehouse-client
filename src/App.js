@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
-          path="manageinventory"
+          path="/manageinventory"
           element={
             <Privete>
               <ManageInventory></ManageInventory>
@@ -25,7 +25,7 @@ function App() {
           }
         />
         <Route
-          path="myitems"
+          path="/myitems"
           element={
             <Privete>
               <MyItems />
@@ -33,7 +33,7 @@ function App() {
           }
         />
         <Route
-          path="additem"
+          path="/additem"
           element={
             <Privete>
               <AddItems />
@@ -41,10 +41,10 @@ function App() {
           }
         />
 
-        <Route path="blog" element={<Blog />} />
+        <Route path="/blog" element={<Blog />} />
 
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

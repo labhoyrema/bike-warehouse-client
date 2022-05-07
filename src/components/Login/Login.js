@@ -4,24 +4,56 @@ import GoogleLogo from "../../images/google.svg";
 import { useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase.init";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [SignInWithGoogle, user] = useSignInWithGoogle(auth);
+  const [SignInWithGoogle] = useSignInWithGoogle(auth);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  if (user) {
+    navigate("/");
+  }
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
+  }
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (user) {
+    return (
+      <div>
+        <p>Signed In User: {user.email}</p>
+      </div>
+    );
+  }
+  const handleEmailLogin = (e) => {
+    const email = e.target.email.value;
+    const password = e.targe.email.value;
+    signInWithEmailAndPassword(email, password);
+  };
   return (
     <Container className="f-container">
       <div className="container-fm  ">
         <div className="signin-container">
           <h1>Longin</h1>
           <div>
-            <form className="form-container">
+            <form className="form-container" onSubmit={handleEmailLogin}>
               <input
                 className="input-email"
-                type="text"
+                type="email"
                 name="email"
                 id="email"
                 placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <input
@@ -30,9 +62,14 @@ const Login = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
-              />{" "}
+                onChange={(e) => setPassword(e.target.value)}
+              />
               <span className="reset">Forget Password</span>
-              <button type="submit" className="form-submit">
+              <button
+                type="submit"
+                className="form-submit"
+                onClick={() => signInWithEmailAndPassword(email, password)}
+              >
                 Login
               </button>
               <p>

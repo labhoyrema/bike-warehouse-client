@@ -6,12 +6,11 @@ import { signOut } from "firebase/auth";
 import "./Header.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../firebase.init";
+
 const Header = () => {
   const navigate = useNavigate();
-  const [user] = useAuthState(auth);
-  if (user) {
-    navigate("/");
-  }
+  const [user, loading] = useAuthState(auth);
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -40,9 +39,11 @@ const Header = () => {
                 Blog
               </Nav.Link>
               {user?.uid ? (
-                <button onClick={() => signOut(auth)}> Sing Out</button>
+                <button onClick={() => signOut(auth)} className="btn-b">
+                  LogOut
+                </button>
               ) : (
-                <Nav.Link as={Link} className="link-btn" to={"/login"}>
+                <Nav.Link as={Link} className="link-btn " to={"/login"}>
                   Login
                 </Nav.Link>
               )}

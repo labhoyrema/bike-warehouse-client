@@ -10,3 +10,15 @@
   background-color: #088508;
   color: #8c9da7;
 }
+.btn-b {
+  height: 40px !important;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #2ea32e;
+  color: white;
+  border: none;
+}
+.btn-b:hover {
+  background-color: #088508;
+  color: #f1e7e7;
+}

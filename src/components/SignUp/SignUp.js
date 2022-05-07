@@ -2,15 +2,30 @@ import React from "react";
 import GoogleLogo from "../../images/google.svg";
 import { useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../firebase.init";
+
 const Register = () => {
   const navigate = useNavigate();
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    createUserWithEmailAndPassword(email, password);
+  };
+  if (user) {
+    navigate("/");
+  }
   return (
     <Container className="f-container">
       <div className="container-fm ">
         <div className="signin-container">
           <h1>SignUp</h1>
           <div>
-            <form className="form-container">
+            <form className="form-container" onSubmit={handleSignUp}>
               <input
                 className="input-email"
                 type="text"
