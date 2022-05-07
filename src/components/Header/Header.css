@@ -1,0 +1,12 @@
+.link-btn {
+  padding: 5px 5px;
+  background-color: #2ea32e;
+  border-radius: 4px;
+  color: #f1e7e7;
+
+  text-decoration: none;
+}
+.link-btn:hover {
+  background-color: #088508;
+  color: #8c9da7;
+}

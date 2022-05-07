@@ -1,0 +1,60 @@
+.container {
+  width: 1140px;
+  padding: 0px 40px;
+  margin: 0 auto;
+}
+.heading-img {
+  background-image: url(https://images.pexels.com/photos/7019259/pexels-photo-7019259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+@media only screen and (max-width: 600px) {
+  .heading-img {
+    height: 80vh;
+  }
+}
+.overlay {
+  background: rgba(50, 70, 80, 0.7);
+  overflow: hidden;
+  height: 100%;
+  z-index: 0;
+}
+.hero-text {
+  display: flex;
+  padding-left: 5px;
+  flex-direction: column;
+  max-width: 500px;
+  margin-top: 20vh;
+  align-items: flex-start;
+  color: white;
+  z-index: 11;
+  border-left: 4px solid green;
+}
+.card {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.card-container {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+.card-sr {
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.service-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
