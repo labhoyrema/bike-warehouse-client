@@ -10,12 +10,22 @@ import AddItems from "./components/AddItems/AddItems";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Privete from "./components/Hooks/Privete";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 function App() {
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route
+          path="/singleProduct/:singleProductId"
+          element={
+            <Privete>
+              <SingleProduct />
+            </Privete>
+          }
+        />
+
         <Route
           path="/manageinventory"
           element={

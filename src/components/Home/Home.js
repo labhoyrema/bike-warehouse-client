@@ -39,21 +39,6 @@ const Home = () => {
         <Row xs={1} md={3} className="g-4 mt-5 mb-5">
           {store.slice(0, 6).map((store) => (
             <Cards key={store._id} store={store} />
-            // <Col key={store._id} className="mb-5">
-            //   <Card>
-            //     <Card.Img variant="top" src={store.image} />
-            //     <Card.Body>
-            //       <Card.Title>name:{store.name}</Card.Title>
-            //       <Card.Text>{store.Descriptiion}</Card.Text>
-            //       <Card.Text>Price: {store.price}</Card.Text>
-            //       <Card.Text>Quantity: {store.quantity}pc</Card.Text>
-            //       <Card.Text>Supplier: {store.supplier}</Card.Text>
-            //       <button onClick={() => navigate("manageinventory")}>
-            //         Submit
-            //       </button>
-            //     </Card.Body>
-            //   </Card>
-            // </Col>
           ))}
         </Row>
       </div>

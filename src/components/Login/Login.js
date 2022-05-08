@@ -10,14 +10,17 @@ import auth from "../firebase.init";
 const Login = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
-  const [SignInWithGoogle, user1] = useSignInWithGoogle(auth);
+  const [SignInWithGoogle] = useSignInWithGoogle(auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [signInWithEmailAndPassword, loading, error] =
+  const [signInWithEmailAndPassword, loading, user1, error] =
     useSignInWithEmailAndPassword(auth);
 
   if (user) {
     navigate("/");
+  }
+  if (loading) {
+    return;
   }
   if (user1) {
     navigate("/");
@@ -52,11 +55,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <span className="reset">Forget Password</span>
-              <button
-                type="submit"
-                className="form-submit"
-                onClick={() => signInWithEmailAndPassword(email, password)}
-              >
+              <button type="submit" className="form-submit">
                 Login
               </button>
               <p>

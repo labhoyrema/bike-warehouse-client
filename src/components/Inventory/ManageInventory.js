@@ -1,15 +1,13 @@
-import React from "react";
 import { Card, Col, Form, Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+
 import "./ManageInventory.css";
 const ManageInventory = () => {
-  const navigate = useNavigate();
   return (
     <div className="container form ">
       <Row xs={1} md={2} className="g-4">
         <Col>
           <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img variant="top" src="" />
             <Card.Body>
               <Card.Title>Card title</Card.Title>
               <Card.Text>
@@ -23,7 +21,6 @@ const ManageInventory = () => {
             </Card.Body>
           </Card>
         </Col>
-
         <Col>
           <Form className="form-containers">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
