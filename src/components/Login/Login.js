@@ -3,37 +3,24 @@ import "./Login.css";
 import GoogleLogo from "../../images/google.svg";
 import { useNavigate } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase.init";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [SignInWithGoogle] = useSignInWithGoogle(auth);
+  const [user] = useAuthState(auth);
+  const [SignInWithGoogle, user1] = useSignInWithGoogle(auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   if (user) {
     navigate("/");
   }
-  if (error) {
-    return (
-      <div>
-        <p>Error: {error.message}</p>
-      </div>
-    );
-  }
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (user) {
-    return (
-      <div>
-        <p>Signed In User: {user.email}</p>
-      </div>
-    );
+  if (user1) {
+    navigate("/");
   }
   const handleEmailLogin = (e) => {
     const email = e.target.email.value;

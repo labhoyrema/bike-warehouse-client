@@ -1,10 +1,58 @@
 [
   {
-    "name": "Honda",
-    "Descriptiion": "honda",
-    "image": "https://imgd.aeplcdn.com/310x174/bw/models/honda-cb350rs-standard20210216125021.jpg?q=80",
-    "price": "500000",
-    "quantity": "15pc",
-    "supplier": "honda privete ltd"
+    "name": "Yamaha R15M ",
+    "Descriptiion": "Yamaha R15M is the newest iteration of the legendary Yamaha R15 series. Over the years, the Yamaha R15 has garnered success in being the poster bike for almost all motorcycle lovers of the South Asian region",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/thumb/yamaha-r15m61a5a6e9d8a08.webp",
+    "price": "555,000 BDT",
+    "quantity": 30,
+    "supplier": "JME Motors (Agrabad)"
+  },
+  {
+    "name": "Honda CBR 150R ABS 2019",
+    "Descriptiion": "If you are a motorcycle enthusiast, then you will know that the motorcycle industry in modern days is quite confusing. There are Thai versions of bikes, there are Japanese versions of bikes",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1613628314_12_608993.jpeg",
+    "price": "Price: 525,000 BDT",
+    "quantity": 20,
+    "supplier": "Bikers Ocean Moto"
+  },
+  {
+    "name": "Suzuki Intruder FI ABS",
+    "Descriptiion": "Bangladeshi motorbikes are generally controlled by commuting motorcycles. This is followed closely by sportbikes and riders who wish to take to the roads on a cruiser bike.",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/suzuki-intruder-fi-abs-matte-black60d70c1ae891f.webp",
+    "price": "304,950 BDT",
+    "quantity": 25,
+    "supplier": "Suzuki RIders Zone"
+  },
+  {
+    "name": "Atlas Zongshen ZS 150 ",
+    "Descriptiion": "Atlas Zongshen 150-58 is a 150cc cruiser bike designed to take on the 150cc motorcycle segment. This is a good-looking bike that is targeted at the cruiser niche of our country.",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1618990953_12_361182.jpeg",
+    "price": "135,000 BDT",
+    "quantity": 20,
+    "supplier": "China"
+  },
+  {
+    "name": "Bajaj Pulsar NS160 FI ABS",
+    "Descriptiion": "Recently, Uttara Motors Ltd. launched the brand new BAJAJ Pulsar NS160 FI ABS in Bangladesh. It will have almost all the features similar to the BAJAJ Pulsar NS160 and the Anti-Lock Braking System (ABS)",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/bajaj-pulsar-ns160-fi-abs-blue60d7134f01a75.webp",
+    "price": "262,500 BDT",
+    "quantity": 30,
+    "supplier": "Uttora Motos"
+  },
+  {
+    "name": "Lifan KPT 150",
+    "Descriptiion": "The number of adventure lovers in Bangladesh is increasing exponentially. Once motorcycles were only considered as commuting transport. However, the number of adventure bikes is increasing at a very slow rate.",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/1619589472_12_120654.jpeg",
+    "price": "260,000",
+    "quantity": 100,
+    "supplier": "Rusel Industry ltd"
+  },
+  {
+    "name": "Zontes ZT155-U1",
+    "Descriptiion": "Zontes ZT155-U1, the new adventurer in town, is stirring up a lot of curiosity. The news of Zontes releasing in Bangladesh has created polarizing opinions. Many people, who do not know much about Zontes, are saying that it will not be up to the mark as this is a Chinese manufacturer. ",
+    "image": "https://www.bikebd.com/den/storage/app/files/shares/images/productimages/slider/zontes-zt155-u1-yellow60d896750a962.webp",
+    "price": "379,000 BDT",
+    "quantity": 20,
+    "supplier": "Bikers Ocean Moto"
   }
 ]

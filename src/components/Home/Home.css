@@ -58,3 +58,8 @@
   margin-top: 80px;
   margin-bottom: 80px;
 }
+.heading-text {
+  border-bottom: 4px solid green;
+  padding-bottom: 5px;
+  width: fit-content;
+}
