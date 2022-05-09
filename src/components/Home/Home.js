@@ -42,8 +42,26 @@ const Home = () => {
           ))}
         </Row>
       </div>
+
+      <div className="banner-bg">
+        <div className="bg-color">
+          <div className="container">
+            <Row md={1}>
+              <Col className="banner-text">
+                <h4>Reach your destination 100% sure and safe</h4>
+                <p>
+                  We designed a detailed homepage layouts that will fit any
+                  transportation industry size. We will take care of your cargo{" "}
+                  <br></br>or your pasenger and deliver them safe and on time!
+                </p>
+              </Col>
+            </Row>
+          </div>
+        </div>
+      </div>
       <section className="container">
-        <h2>OUR SERVICES</h2>
+        <h2 className="heading-text">OUR SERVICES</h2>
+
         <div className="service-section">
           <div className="service-card">
             <div className="card-sr">
@@ -53,31 +71,36 @@ const Home = () => {
           </div>
           <div className="service-card">
             <div className="card-sr">
-              <h4>Packaging and storage</h4>
-              <p>We can package and store your thinks.</p>
+              <h4>GROUND TRANSPORT</h4>
+              <p>
+                Transport began providing transportation solutions to Transport’
+              </p>
             </div>
           </div>
           <div className="service-card">
             <div className="card-sr">
-              <h4>Packaging and storage</h4>
-              <p>We can package and store your thinks.</p>
+              <h4>WAREHOUSING</h4>
+              <p>Transport provides warehousing, fulfillment services,</p>
             </div>
           </div>
           <div className="service-card">
             <div className="card-sr">
-              <h4>Packaging and storage</h4>
-              <p>We can package and store your thinks.</p>
+              <h4>LOGISTIC SERVICE</h4>
+              <p>
+                Transport offers a host of logistic management services and
+                supply chain solutions.
+              </p>
             </div>
           </div>
           <div className="service-card">
             <div className="card-sr">
-              <h4>Packaging and storage</h4>
-              <p>We can package and store your thinks.</p>
+              <h4>FREIGHT FORWARDING</h4>
+              <p>With a global presence in 67 countries, TransCargo</p>
             </div>
           </div>
           <div className="service-card">
             <div className="card-sr">
-              <h4>Packaging and storage</h4>
+              <h4>SUPPLY CHAIN SOLUTIONS</h4>
               <p>We can package and store your thinks.</p>
             </div>
           </div>

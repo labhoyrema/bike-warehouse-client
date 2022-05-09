@@ -4,3 +4,14 @@
   background-color: white;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+.card-btn {
+  background-color: #05a105 !important;
+  padding: 6px 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.card-btn:hover {
+  background-color: #066606 !important;
+  color: #aca59c;
+}

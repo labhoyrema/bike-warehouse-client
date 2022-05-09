@@ -13,7 +13,7 @@ const SingleProduct = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
-  console.log(product);
+  const updateQuantity = (e) => {};
 
   return (
     <div className="container form ">
@@ -32,6 +32,7 @@ const SingleProduct = () => {
               <Card.Text>Quantity:55</Card.Text>
               <Card.Text>Supplier</Card.Text>
             </Card.Body>
+            <button>delivered</button>
           </Card>
         </Col>
       </Row>
