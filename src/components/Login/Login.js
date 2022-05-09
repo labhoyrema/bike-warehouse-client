@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Login.css";
 import GoogleLogo from "../../images/google.svg";
 import { useNavigate } from "react-router-dom";
@@ -6,13 +5,14 @@ import { Container } from "react-bootstrap";
 import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase.init";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
   const [SignInWithGoogle] = useSignInWithGoogle(auth);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const [signInWithEmailAndPassword, loading, user1, error] =
     useSignInWithEmailAndPassword(auth);
 
@@ -22,13 +22,27 @@ const Login = () => {
   if (loading) {
     return;
   }
-  if (user1) {
-    navigate("/");
-  }
+
   const handleEmailLogin = (e) => {
+    e.preventDefault();
     const email = e.target.email.value;
-    const password = e.targe.email.value;
+    const password = e.target.password.value;
     signInWithEmailAndPassword(email, password);
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          localStorage.setItem("accessToken", data.accessToken);
+          navigate("/orders");
+        }
+        console.log(data);
+      });
   };
   return (
     <Container className="f-container">
@@ -43,7 +57,7 @@ const Login = () => {
                 name="email"
                 id="email"
                 placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
+                // onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <input
@@ -52,7 +66,7 @@ const Login = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
+                // onChange={(e) => setPassword(e.target.value)}
               />
               <span className="reset">Forget Password</span>
               <button type="submit" className="form-submit">

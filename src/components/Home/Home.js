@@ -13,7 +13,7 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setStore(data));
   }, []);
-  console.log(store.name);
+
   return (
     <>
       <div className="heading-img">

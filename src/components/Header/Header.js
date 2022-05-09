@@ -15,7 +15,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            React-Bootstrap
+            <span style={{ color: "green" }}>BD</span> Inventory
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -31,9 +31,7 @@ const Header = () => {
               <Nav.Link as={Link} to="additem">
                 Add Item
               </Nav.Link>
-              <Nav.Link as={Link} to={"/myitems"}>
-                My Items
-              </Nav.Link>
+
               <Nav.Link as={Link} to={"/Blog"}>
                 Blog
               </Nav.Link>
@@ -42,7 +40,7 @@ const Header = () => {
                   LogOut
                 </button>
               ) : (
-                <Nav.Link as={Link} className="link-btn " to={"/login"}>
+                <Nav.Link as={Link} className="link-btn btn-l " to={"/login"}>
                   Login
                 </Nav.Link>
               )}

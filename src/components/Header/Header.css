@@ -25,3 +25,17 @@
 .display {
   display: none;
 }
+@media only screen and (max-width: 600px) {
+  .btn-l {
+    height: 40px !important;
+    width: 80px;
+    border-radius: 5px;
+    background-color: #2ea32e;
+    color: white;
+    border: none;
+  }
+  .btn-l:hover {
+    background-color: #088508;
+    color: #f1e7e7;
+  }
+}
