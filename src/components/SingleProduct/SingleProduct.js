@@ -13,7 +13,21 @@ const SingleProduct = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
-  const updateQuantity = (e) => {};
+
+  // const updateQuantity = (e) => {
+  //   // const update = e.target.number.value;
+  //   const newQuantity = product.quantity + update;
+  //   console.log(update);
+
+  //   const url = `http://localhost:5000/bikedata/${singleProductId}`;
+  //   fetch(url, {
+  //     method: "PUT",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(newQuantity),
+  //   });
+  //
 
   return (
     <div className="container form ">
@@ -22,16 +36,13 @@ const SingleProduct = () => {
           <Card>
             <Card.Img variant="top" src={product.image} />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </Card.Text>
-              <Card.Text>Price:55$</Card.Text>
-              <Card.Text>Quantity:55</Card.Text>
-              <Card.Text>Supplier</Card.Text>
+              <Card.Title>{product.name}</Card.Title>
+              <Card.Text>{product.Descriptiion}</Card.Text>
+              <Card.Text>{product.price}</Card.Text>
+              <Card.Text>Quantity:{product.quantity}</Card.Text>
+              <Card.Text>Supplier{product.supplier}</Card.Text>
             </Card.Body>
+
             <button>delivered</button>
           </Card>
         </Col>
